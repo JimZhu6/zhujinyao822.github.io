@@ -93,7 +93,7 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: /
-  #about: /about/ || user
+  # about: /about/ || user
   tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
@@ -395,7 +395,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-# livere_uid: MTAyMC8zNTIzNS8xMTc3MQ==
+livere_uid: MTAyMC8zNTIzNS8xMTc3MQ==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
