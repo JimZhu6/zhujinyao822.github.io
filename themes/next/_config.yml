@@ -193,8 +193,9 @@ sidebar:
   # Back to top in sidebar (only for Pisces | Gemini).
   b2t: false
 
+  #调节是否显示当前浏览进度
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
@@ -223,7 +224,8 @@ auto_excerpt:
 post_meta:
   item_text: true
   created_at: true
-  updated_at: false
+  # 手动编写更新时间
+  updated_at: true
   categories: true
 
 # Post wordcount display settings
@@ -674,8 +676,9 @@ motion:
 # Fancybox
 fancybox: true
 
+#顶部加载条
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
@@ -692,7 +695,7 @@ pace: false
 #pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-minimal
+pace_theme: pace-theme-bounce
 
 # Canvas-nest
 canvas_nest: false
