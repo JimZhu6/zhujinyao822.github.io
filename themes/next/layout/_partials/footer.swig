@@ -23,7 +23,7 @@
 
 {% if theme.footer.powered %}
   <div class="powered-by">{#
-  #}{{ __('footer.powered') }}{#
+  #}{{ __('footer.powered', '<a class="theme-link" target="_blank" href="https://github.com/zhujinyao822">Hexo</a>') }}{#
 #}</div>
 {% endif %}
 
@@ -34,8 +34,9 @@
 {% if theme.footer.theme.enable %}
   <div class="theme-info">{#
   #}{{ __('footer.theme') }} &mdash; {#
-  #}<a class="theme-link" target="_blank" href="https://github.com/zhujinyao822">{#
-    #}我的github{#
+  #}<a class="theme-link" target="_blank" href="https://zhujinyao822.github.io">{#
+    #}我的GitHub{#
+  #}</a>{% if theme.footer.theme.version %} v{{ theme.version }}{% endif %}{#
 #}</div>
 {% endif %}
 
