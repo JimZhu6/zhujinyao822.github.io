@@ -36,7 +36,7 @@
   #}{{ __('footer.theme') }} &mdash; {#
   #}<a class="theme-link" target="_blank" href="https://github.com/zhujinyao822">{#
     #}我的GitHub{#
-  #}</a>{% if theme.footer.theme.version %} v{{ theme.version }}{% endif %}{#
+  #}</a>{% if theme.footer.theme.version %} {% endif %}{#
 #}</div>
 {% endif %}
 
