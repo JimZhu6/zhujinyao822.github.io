@@ -1,12 +1,11 @@
 ---
 title: "关于REM布局的相关知识"
-tags: "前端"
-categories: "学习类"
+categories: "资料类"
 date: 2018-3-31
 password: 
 ---
 
-# 关于REM布局的相关知识
+
 
 #### 先说说目前为止我所学到的长度单位
 

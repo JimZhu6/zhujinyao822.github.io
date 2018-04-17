@@ -1,13 +1,11 @@
 ---
 title: "MD模板"
-tags: "实用"
 categories: "模板类"
 date: 2018-3-28
 comments:
 ---
 
-Markdown: Basics （快速入门） / ([点击查看完整语法说明](./index.html))
-================
+
 
 Getting the Gist of Markdown's Formatting Syntax
 ------------------------------------------------
