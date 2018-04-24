@@ -9,6 +9,8 @@ copyright: true
 
 <!--more-->
 
+[资料参考：Vue2.0 探索之路——生命周期和钩子函数的一些理解](https://segmentfault.com/a/1190000008010666)
+
 vue组件生命周期分八个阶段：
 
 1. beforeCreate----实例初始化，组件属性运行计算之前；
