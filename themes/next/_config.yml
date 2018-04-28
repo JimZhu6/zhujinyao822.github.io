@@ -367,7 +367,7 @@ disqus:
   count: true
 
 # Hypercomments
-#hypercomments_id:
+hypercomments_id: 104163
 
 # changyan
 changyan:
@@ -397,7 +397,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: MTAyMC8zNTIzNS8xMTc3MQ==
+# livere_uid: MTAyMC8zNTIzNS8xMTc3MQ==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
