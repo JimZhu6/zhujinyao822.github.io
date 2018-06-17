@@ -279,13 +279,14 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night
 
 
 # ---------------------------------------------------------------
 # Font Settings
 # - Find fonts on Google Fonts (https://www.google.com/fonts)
 # - All fonts set here will have the following styles:
+#     轻，轻斜体，正常，正常斜体，粗体，粗斜体。
 #     light, light italic, normal, normal italic, bold, bold italic
 # - Be aware that setting too much fonts will cause site running slowly
 # - Introduce in 5.0.1
@@ -318,6 +319,7 @@ font:
     family:
     size:
 
+# 文章字体
   # Font settings for posts.
   # Fallback to `global` font settings.
   posts:
@@ -367,7 +369,7 @@ disqus:
   count: true
 
 # Hypercomments
-hypercomments_id: 104163
+# hypercomments_id: 104163
 
 # changyan
 changyan:
@@ -397,7 +399,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-# livere_uid: MTAyMC8zNTIzNS8xMTc3MQ==
+livere_uid: MTAyMC8zNTIzNS8xMTc3MQ==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
@@ -697,6 +699,7 @@ pace: true
 # pace_theme: pace-theme-center-simple
 pace_theme: pace-theme-bounce
 
+# 下面四个是预设背景动画
 # Canvas-nest
 canvas_nest: false
 

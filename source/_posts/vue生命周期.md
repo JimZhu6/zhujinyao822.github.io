@@ -5,7 +5,7 @@ date: 2018-4-24
 copyright: true
 ---
 
-![vue生命周期](/img/vue生命周期/lifecycle.png)
+![vue生命周期](http://paewu4clp.bkt.clouddn.com/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-lifecycle.png)
 
 <!--more-->
 

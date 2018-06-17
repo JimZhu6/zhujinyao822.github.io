@@ -30,7 +30,7 @@ copyright: false
 
 服务器对客户端生成cookies流程：
 
-![](/img/http无状态/cookies.png)
+![](http://paewu4clp.bkt.clouddn.com/cookies.png)
 
 
 
