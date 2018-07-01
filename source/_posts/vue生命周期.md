@@ -1,7 +1,7 @@
 ---
 title: "浅谈vue组件的生命周期"
 categories: "学习笔记类"
-date: 2018-4-24
+date: 2018-4-24 16:47:37
 copyright: true
 ---
 

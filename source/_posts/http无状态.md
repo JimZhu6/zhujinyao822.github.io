@@ -2,7 +2,6 @@
 title: "http无状态概念"
 categories: "学习笔记类"
 data: 2018-4-18 20:18:50
-copyright: false
 ---
 
 ​	今天接触到了无状态的相关概念，上网找到了些相关资料
