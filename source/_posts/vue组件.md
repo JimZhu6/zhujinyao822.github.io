@@ -1,6 +1,6 @@
 ---
 title: "vue小记（组件间的信息传递）"
-data: 2018-4-22 20:18:29
+date: 2018-4-22 20:18:29
 categories: "学习笔记类"
 copyright: true
 ---

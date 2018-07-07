@@ -1,7 +1,7 @@
 ---
 title: "vscode插件Settings Sync使用介绍"
 categories: "资料类"
-data: 2018-4-27 21:24:52
+date: 2018-6-27 21:24:52
 copyright: true
 ---
 
