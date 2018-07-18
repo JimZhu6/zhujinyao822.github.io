@@ -13,8 +13,8 @@ Getting the Gist of Markdown's Formatting Syntax
 
 <!--more-->
 
-[s]: http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md "Markdown Syntax"
-[d]: http://daringfireball.net/projects/markdown/dingus "Markdown Dingus"
+[s]: https://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md "Markdown Syntax"
+[d]: https://daringfireball.net/projects/markdown/dingus "Markdown Dingus"
 
 其实直接试试看也是一个很不错的方法， [Dingus][d] 是一个网页应用程序，你可以把自已编写的 Markdown 文档转成 XHTML。
 
@@ -24,8 +24,8 @@ Getting the Gist of Markdown's Formatting Syntax
 
 Markdown 支持两种标题的语法，[Setext] [1] 和 [atx] [2] 形式。Setext 形式是用底线的形式，利用 `=` （最高阶标题）和 `-` （第二阶标题），Atx 形式在行首插入 1 到 6 个 `#` ，对应到标题 1 到 6 阶。
 
-[1]: http://docutils.sourceforge.net/mirror/setext.html
-[2]: http://www.aaronsw.com/2002/atx/
+[1]: https://docutils.sourceforge.net/mirror/setext.html
+[2]: https://www.aaronsw.com/2002/atx/
 
 区块引用则使用 email 形式的 '`>`' 角括号。
 
@@ -146,20 +146,20 @@ Markdown 支援两种形式的链接语法： *行内* 和 *参考* 两种形式
 
 行内形式是直接在后面用括号直接接上链接：
 
-	This is an [example link](http://example.com/).
+	This is an [example link](https://example.com/).
 
 输出 HTML 为：
 
-	<p>This is an <a href="http://example.com/">
+	<p>This is an <a href="https://example.com/">
 	example link</a>.</p>
 
 你也可以选择性的加上 title 属性：
 
-	This is an [example link](http://example.com/ "With a Title").
+	This is an [example link](https://example.com/ "With a Title").
 
 输出 HTML 为：
 
-	<p>This is an <a href="http://example.com/" title="With a Title">
+	<p>This is an <a href="https://example.com/" title="With a Title">
 	example link</a>.</p>
 
 参考形式的链接让你可以为链接定一个名称，之后你可以在文件的其他地方定义该链接的内容：
@@ -167,15 +167,15 @@ Markdown 支援两种形式的链接语法： *行内* 和 *参考* 两种形式
 	I get 10 times more traffic from [Google][1] than from
 	[Yahoo][2] or [MSN][3].
 	
-	[1]: http://google.com/ "Google"
-	[2]: http://search.yahoo.com/ "Yahoo Search"
-	[3]: http://search.msn.com/ "MSN Search"
+	[1]: https://google.com/ "Google"
+	[2]: https://search.yahoo.com/ "Yahoo Search"
+	[3]: https://search.msn.com/ "MSN Search"
 
 输出 HTML 为：
 
-	<p>I get 10 times more traffic from <a href="http://google.com/"
-	title="Google">Google</a> than from <a href="http://search.yahoo.com/"
-	title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/"
+	<p>I get 10 times more traffic from <a href="https://google.com/"
+	title="Google">Google</a> than from <a href="https://search.yahoo.com/"
+	title="Yahoo Search">Yahoo</a> or <a href="https://search.msn.com/"
 	title="MSN Search">MSN</a>.</p>
 
 title 属性是选择性的，链接名称可以用字母、数字和空格，但是不分大小写：
@@ -183,12 +183,12 @@ title 属性是选择性的，链接名称可以用字母、数字和空格，�
 	I start my morning with a cup of coffee and
 	[The New York Times][NY Times].
 	
-	[ny times]: http://www.nytimes.com/
+	[ny times]: https://www.nytimes.com/
 
 输出 HTML 为：
 
 	<p>I start my morning with a cup of coffee and
-	<a href="http://www.nytimes.com/">The New York Times</a>.</p>
+	<a href="https://www.nytimes.com/">The New York Times</a>.</p>
 
 
 ### 图片 ###

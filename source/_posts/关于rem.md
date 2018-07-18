@@ -45,13 +45,13 @@ date: 2018-3-31 16:23:08
 
 在页面的css顶部，需要加媒体查询（@media）来设置HTML的font-size。
 
-![](http://paewu4clp.bkt.clouddn.com/%E5%85%B3%E4%BA%8EREM-1.png)
+![](https://paewu4clp.bkt.clouddn.com/%E5%85%B3%E4%BA%8EREM-1.png)
 
 这是有计算公式的：**font-size=要适配的屏幕宽度*基础值/设计稿的宽度**
 
-​	这里有一个转换多个媒体查询的[在线工具](http://mxd.tencent.com/wp-content/uploads/2014/11/rem.html)，只需要提供设计稿宽度以及基础值，即可生成多个不同宽度对应的媒体查询代码，将其引入你的css中即可使你的页面兼容多个不同分辨率的显示（要放在在你编写的css之前）。
+​	这里有一个转换多个媒体查询的[在线工具](https://mxd.tencent.com/wp-content/uploads/2014/11/rem.html)，只需要提供设计稿宽度以及基础值，即可生成多个不同宽度对应的媒体查询代码，将其引入你的css中即可使你的页面兼容多个不同分辨率的显示（要放在在你编写的css之前）。
 
-![](http://paewu4clp.bkt.clouddn.com/%E5%85%B3%E4%BA%8EREM-3.png)
+![](https://paewu4clp.bkt.clouddn.com/%E5%85%B3%E4%BA%8EREM-3.png)
 
 ​	**目前已知的缺陷（数据源自[Can I use？](https://www.caniuse.com/#search=rem)）：**
 
@@ -69,7 +69,7 @@ date: 2018-3-31 16:23:08
 
 部分css初始化代码里设置了元素的**line-hight**，此时使用rem设置元素大小将会出现布局错乱（行高放大了好几倍）。
 
-![](http://paewu4clp.bkt.clouddn.com/%E5%85%B3%E4%BA%8EREM-2-1.png)
+![](https://paewu4clp.bkt.clouddn.com/%E5%85%B3%E4%BA%8EREM-2-1.png)
 
-![](http://paewu4clp.bkt.clouddn.com/%E5%85%B3%E4%BA%8EREM-2-2.png)
+![](https://paewu4clp.bkt.clouddn.com/%E5%85%B3%E4%BA%8EREM-2-2.png)
 

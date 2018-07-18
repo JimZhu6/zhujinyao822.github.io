@@ -28,8 +28,8 @@ date: 2018-4-18 20:18:50
 
 服务器对客户端生成cookies流程：
 
-![](http://paewu4clp.bkt.clouddn.com/cookies.png)
+![](https://paewu4clp.bkt.clouddn.com/cookies.png)
 
 
 
-> 参考文章：[http协议无状态中的 "状态" 到底指的是什么？！](http://www.cnblogs.com/bellkosmos/p/5237146.html) 
+> 参考文章：[https协议无状态中的 "状态" 到底指的是什么？！](https://www.cnblogs.com/bellkosmos/p/5237146.html) 
