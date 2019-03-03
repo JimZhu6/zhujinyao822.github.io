@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Zjy的小站
-subtitle: 欢迎来到我的小站
-description:
+title: 无题
+subtitle: 一个灵魂的独白
+description: Jim的博客
 keywords:
-author: Zhujinyao
-language: zh-Hans
+author: Jim
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://zjinyao.com
 root: /
-permalink: :title.html
+permalink: /posts/:abbrlink.html
 # permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -75,9 +75,14 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: next
-theme: theme-bmw
+theme: tomotoes
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# abbrlink config
+abbrlink:
+  alg: crc32 #算法 crc16(default) and crc32
+  rep: hex #进制 dec(default) and hex
