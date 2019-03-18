@@ -1,8 +1,12 @@
 ---
-title: "浅谈vue路由"
-categories: "学习笔记类"
-date: 2018-4-26 10:47:03
+title: 浅谈vue路由
+categories: 学习笔记类
 copyright: true
+tags:
+  - 笔记
+  - VUE
+abbrlink: fa8a7b62
+date: 2018-04-26 10:47:03
 ---
 
 > vue中路由的作用就像是在html中的tap栏切换，根据路由规则去加载不用的组件

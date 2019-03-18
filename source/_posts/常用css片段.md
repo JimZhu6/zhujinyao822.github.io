@@ -1,7 +1,12 @@
 ---
-title: "常用css/css3代码段"
-categories: "资料类"
-date: 2018-7-1 16:23:08
+title: 常用css/css3代码段
+categories: 资料类
+tags:
+  - 笔记
+  - 布局
+  - CSS
+abbrlink: 14e60f66
+date: 2018-07-01 16:23:08
 ---
 
 下面是一些常用的css代码片段，仅供参考

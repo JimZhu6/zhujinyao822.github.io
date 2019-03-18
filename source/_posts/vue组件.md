@@ -2,6 +2,9 @@
 title: vue小记（组件间的信息传递）
 categories: 学习笔记类
 copyright: true
+tags:
+  - 笔记
+  - VUE
 abbrlink: 50c39cd3
 date: 2018-04-22 20:18:29
 ---

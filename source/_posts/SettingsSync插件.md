@@ -2,6 +2,9 @@
 title: vscode插件Settings Sync使用介绍
 categories: 资料类
 copyright: true
+tags:
+  - 笔记
+  - vsCode
 abbrlink: 91b27d98
 date: 2018-06-27 21:24:52
 ---

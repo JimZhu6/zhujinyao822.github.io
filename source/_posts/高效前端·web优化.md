@@ -1,8 +1,11 @@
 ---
-title: "高效前端·Web优化"
-categories: "资料类"
-date: 2018-09-12
+title: 高效前端·Web优化
+categories: 资料类
+tags:
+  - 阅读笔记
 copyright: true
+abbrlink: ac8702bc
+date: 2018-09-12 00:00:00
 ---
 
 > 本文参考[《高效前端：Web高效变成与优化实践》](https://book.douban.com/subject/30170670/)作者：[李银城](https://www.zhihu.com/people/li-yin-cheng-24/activities)。这本书里面讲述了很多关于如何能使前端代码运行起来更加轻巧的方法。目前，我阅读了这本书的前一章，我写这篇文章是当做写这本书的阅读笔记，记录一些以后可能会用到的实用的方法。

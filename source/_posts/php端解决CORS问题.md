@@ -1,9 +1,16 @@
 ---
 title: php端解决跨域问题
-tags: ["php","后端"]
+categories: 学习笔记类
+tags:
+  - php
+  - 后端
+abbrlink: 9c2031c1
 ---
 
-在本地用wamp部署服务器时遇到的问题，由于我前端页面与后端使用两个不同的域名空间，所以提示了下面的跨域问题：
+记录了下在本地用wamp部署服务器时遇到的问题。
+<!-- more -->
+
+由于我前端页面与后端使用两个不同的域名空间，所以提示了下面的跨域问题：
 
 > Access to XMLHttpRequest at 'http://php.cc/tools/login/login' from origin 'http://demo.cc' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
 

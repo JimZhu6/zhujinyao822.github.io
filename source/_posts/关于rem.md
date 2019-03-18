@@ -1,6 +1,10 @@
 ---
 title: 关于REM布局的相关知识
 categories: 学习笔记类
+tags:
+  - 笔记
+  - 布局
+  - CSS
 abbrlink: 665b26b3
 date: 2018-03-31 16:23:08
 ---

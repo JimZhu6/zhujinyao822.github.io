@@ -1,6 +1,9 @@
 ---
 title: http无状态概念
 categories: 学习笔记类
+tags:
+  - 笔记
+  - 网络交互
 abbrlink: 1eeccae2
 date: 2018-04-18 20:18:50
 ---
