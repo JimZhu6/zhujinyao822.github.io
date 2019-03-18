@@ -1,8 +1,9 @@
 ---
-title: "vue小记（组件间的信息传递）"
-date: 2018-4-22 20:18:29
-categories: "学习笔记类"
+title: vue小记（组件间的信息传递）
+categories: 学习笔记类
 copyright: true
+abbrlink: 50c39cd3
+date: 2018-04-22 20:18:29
 ---
 
 ### vue组件的定义
@@ -146,7 +147,7 @@ components: {
 - 通过v-bind指令，在父组件的模板里的子组件标签动态绑定属性（子组件容器的名字=父组件data里声明的名字）
 - 在子组件里吧props里的数据用插值表达式取出来
 
-![父传子](https://paewu4clp.bkt.clouddn.com/vue%E7%BB%84%E4%BB%B6-%E7%88%B6%E4%BC%A0%E5%AD%90.png)
+![父传子.png](https://i.loli.net/2019/03/11/5c866524a4ae1.png)
 
 ```javascript
 Vue.component('boxC', {
@@ -209,7 +210,7 @@ methods: {
 - 在父组件里的子组件标签通过v-on指令去监听子组件传递上来的事件名称，监听到之后，可以执行一个通过参数传递子组件数据的函数
 - 通过这个函数的默认参数，取到从子组件传递过来的值，然后再在data里定义一个变量接收传过来的值
 
-![子传父1](https://paewu4clp.bkt.clouddn.com/vue%E7%BB%84%E4%BB%B6-%E5%AD%90%E4%BC%A0%E7%88%B61.png)
+![子传父1.png](https://i.loli.net/2019/03/11/5c86652606e45.png)
 
 ```javascript
 Vue.component('boxC', {
@@ -280,7 +281,7 @@ methods: {
 
 - 获取到值后可以在data中声明一个变量来存储取到的值，再渲染到页面上
 
-![兄弟之间的传递](https://paewu4clp.bkt.clouddn.com/vue%E7%BB%84%E4%BB%B6-%E5%85%84%E5%BC%9F%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BC%A0%E9%80%92.png)
+![兄弟之间的传递.png](https://i.loli.net/2019/03/11/5c8665264755c.png)
 
 ```javascript
 var evtBus = new Vue();//创建一个事件总线

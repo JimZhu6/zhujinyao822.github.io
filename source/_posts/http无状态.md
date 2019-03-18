@@ -1,7 +1,8 @@
 ---
-title: "http无状态概念"
-categories: "学习笔记类"
-date: 2018-4-18 20:18:50
+title: http无状态概念
+categories: 学习笔记类
+abbrlink: 1eeccae2
+date: 2018-04-18 20:18:50
 ---
 
 
@@ -28,7 +29,7 @@ date: 2018-4-18 20:18:50
 
 服务器对客户端生成cookies流程：
 
-![](https://paewu4clp.bkt.clouddn.com/cookies.png)
+![cookies.png](https://i.loli.net/2019/03/11/5c8662747cb94.png)
 
 
 
