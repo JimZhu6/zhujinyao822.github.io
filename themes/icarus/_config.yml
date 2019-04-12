@@ -163,9 +163,9 @@ widgets:
         #     PPOffice: 'https://github.com/ppoffice'
     -
         # Widget name
-        type: category
+        # type: category
         # Where should the widget be placed, left or right
-        position: right
+        # position: right
     -
         # Widget name
         type: tagcloud
