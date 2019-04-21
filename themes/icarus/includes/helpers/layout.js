@@ -1,10 +1,10 @@
 /**
  * Helper functions for controlling layout.
  *
-* @example
-*     <%- get_widgets(position) %>
-*     <%- has_column() %>
-*     <%- column_count() %>
+ * @example
+ *     <%- get_widgets(position) %>
+ *     <%- has_column() %>
+ *     <%- column_count() %>
  */
 module.exports = function (hexo) {
     hexo.extend.helper.register('has_widget', function (type) {
@@ -32,6 +32,10 @@ module.exports = function (hexo) {
 
     hexo.extend.helper.register('column_count', function () {
         let columns = 1;
+        // 2019年4月21日：设置浏览文章时为双栏模式（新增下面三行）
+        if (this.page.__post === true || this.page.__page === true) {
+            return 2;
+        }
         const hasColumn = hexo.extend.helper.get('has_column').bind(this);
         columns += hasColumn('left') ? 1 : 0;
         columns += hasColumn('right') ? 1 : 0;

@@ -21,7 +21,10 @@
             <div class="columns">
                 <div class="column <%= main_column_class() %> has-order-2 column-main"><%- body %></div>
                 <%- partial('common/widget', { position: 'left' }) %>
+                <!-- 2019年4月21日：设置浏览文章时为双栏模式（新增下面一行if判断，25-27） -->
+                <% if (page.__page !== true && page.__post !== true) { %>
                 <%- partial('common/widget', { position: 'right' }) %>
+                <% } %>
             </div>
         </div>
     </section>

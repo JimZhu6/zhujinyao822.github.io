@@ -25,7 +25,9 @@
         <%- partial('widget/' + widget.type, { widget, post: page }) %>
     <% }) %>
     <% if (position === 'left') { %>
-        <div class="column-right-shadow is-hidden-widescreen <%= sticky_class('right') %>">
+        <!-- 2019年4月21日：设置浏览文章时为双栏模式（修改下面一行） -->
+        <!-- <div class="column-right-shadow is-hidden-widescreen <%= sticky_class('right') %>"> -->
+        <div class="column-right-shadow <%= (page.__page !== true && page.__post !== true) ? 'is-hidden-widescreen' : '' %> <%= sticky_class('right') %>">
         <% get_widgets('right').forEach(widget => {%>
             <%- partial('widget/' + widget.type, { widget, post: page }) %>
         <% }) %>

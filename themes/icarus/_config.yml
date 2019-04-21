@@ -1,11 +1,11 @@
 # Version of the Icarus theme that is currently used
 version: 2.3.0
 # Path or URL to the website's icon
-favicon: /images/favicon.ico
+favicon: /images/avatar.ico
 # Path or URL to RSS atom.xml
 rss: /atom.xml
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
-logo: /images/avatar.jpg
+logo: /images/avatar.png
 # Open Graph metadata
 # https://hexo.io/docs/helpers.html#open-graph
 open_graph:
@@ -62,10 +62,10 @@ search:
     type: insight
 # Comment plugin settings
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Comment-Plugins
-comment:
+# comment:
     # Name of the comment plugin
-    type: disqus
-    shortname: jimblogpage
+    # type: disqus
+    # shortname: jimblogpage
 # Donation entries
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Donation/
 donate:
@@ -95,7 +95,7 @@ donate:
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Share-Plugins
 share:
     # Share plugin name
-    type: 
+    type: sharejs
 # Sidebar settings.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -122,20 +122,20 @@ widgets:
         # Title of the author to be shown in the profile widget
         author_title: 
         # Author's current location to be shown in the profile widget
-        location: China
+        location: China-GuangDong
         # Path or URL to the avatar to be shown in the profile widget
-        avatar: /images/avatar.jpg
+        avatar: /images/avatar.png
         # Email address for the Gravatar to be shown in the profile widget
         gravatar: 
         # Whether to show avatar image rounded or square
-        avatar_rounded: true
+        avatar_rounded: false
         # Path or URL for the follow button
         follow_link: 'https://github.com/zhujinyao822'
         # Links to be shown on the bottom of the profile widget
         social_links:
-        #     Github:
-        #         icon: fab fa-github
-        #         url: 'https://github.com/zhujinyao822'
+            # Github:
+            #     icon: fab fa-github
+            #     url: 'https://github.com/zhujinyao822'
         #     Facebook:
         #         icon: fab fa-facebook
         #         url: 'http://facebook.com'
@@ -153,11 +153,11 @@ widgets:
         type: toc
         # Where should the widget be placed, left or right
         position: left
-    -
+    # -
         # Widget name
-        type: links
+        # type: links
         # Where should the widget be placed, left or right
-        position: left
+        # position: left
         # Links to be shown in the links widget
         # links:
         #     Hexo: 'https://hexo.io'
