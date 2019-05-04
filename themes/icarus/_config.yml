@@ -233,3 +233,6 @@ providers:
     fontcdn: google
     # Name or URL of the webfont Icon CDN provider
     iconcdn: fontawesome
+
+# 默认开启toc
+toc: true
