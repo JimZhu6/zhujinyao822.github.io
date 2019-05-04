@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>关于REM布局的相关知识 - 无题</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="先说说目前为止我所学到的长度单位 px——绝对长度单位，最基本的长度单位，相对于屏幕分辨率来定义元素的大小。  em——相对长度单位，相对于自身的font-size进行定义元素的大小，如果元素自身没有定义font-size，则默认选用浏览器的默认字体大小（浏览器的默认字体大小是16px）。  百分比%——百分比单位，继承父元素的大小，一般用于设置某个盒子的宽度。  rem——相对长度单位。 ​">
+<meta name="keywords" content="笔记,布局,CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于REM布局的相关知识">
+<meta property="og:url" content="https://zjinyao.com/posts/665b26b3.html">
+<meta property="og:site_name" content="无题">
+<meta property="og:description" content="先说说目前为止我所学到的长度单位 px——绝对长度单位，最基本的长度单位，相对于屏幕分辨率来定义元素的大小。  em——相对长度单位，相对于自身的font-size进行定义元素的大小，如果元素自身没有定义font-size，则默认选用浏览器的默认字体大小（浏览器的默认字体大小是16px）。  百分比%——百分比单位，继承父元素的大小，一般用于设置某个盒子的宽度。  rem——相对长度单位。 ​">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://zjinyao.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-05-04T09:53:01.988Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于REM布局的相关知识">
+<meta name="twitter:description" content="先说说目前为止我所学到的长度单位 px——绝对长度单位，最基本的长度单位，相对于屏幕分辨率来定义元素的大小。  em——相对长度单位，相对于自身的font-size进行定义元素的大小，如果元素自身没有定义font-size，则默认选用浏览器的默认字体大小（浏览器的默认字体大小是16px）。  百分比%——百分比单位，继承父元素的大小，一般用于设置某个盒子的宽度。  rem——相对长度单位。 ​">
+<meta name="twitter:image" content="https://zjinyao.com/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="/atom.xml" title="关于REM布局的相关知识" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/avatar.ico">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai-sublime.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/avatar.png" alt="关于REM布局的相关知识" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-03-31T16:23:08.000Z">2018-03-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/学习笔记类/">学习笔记类</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 918 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                关于REM布局的相关知识
+            
+        </h1>
+        <div class="content">
+            <h4 id="&#x5148;&#x8BF4;&#x8BF4;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x6211;&#x6240;&#x5B66;&#x5230;&#x7684;&#x957F;&#x5EA6;&#x5355;&#x4F4D;"><a href="#&#x5148;&#x8BF4;&#x8BF4;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x6211;&#x6240;&#x5B66;&#x5230;&#x7684;&#x957F;&#x5EA6;&#x5355;&#x4F4D;" class="headerlink" title="&#x5148;&#x8BF4;&#x8BF4;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x6211;&#x6240;&#x5B66;&#x5230;&#x7684;&#x957F;&#x5EA6;&#x5355;&#x4F4D;"></a>&#x5148;&#x8BF4;&#x8BF4;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x6211;&#x6240;&#x5B66;&#x5230;&#x7684;&#x957F;&#x5EA6;&#x5355;&#x4F4D;</h4><ul>
+<li><p><strong>px</strong>&#x2014;&#x2014;<em>&#x7EDD;&#x5BF9;&#x957F;&#x5EA6;&#x5355;&#x4F4D;</em>&#xFF0C;&#x6700;&#x57FA;&#x672C;&#x7684;&#x957F;&#x5EA6;&#x5355;&#x4F4D;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x5C4F;&#x5E55;&#x5206;&#x8FA8;&#x7387;&#x6765;&#x5B9A;&#x4E49;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+</li>
+<li><p><strong>em</strong>&#x2014;&#x2014;<em>&#x76F8;&#x5BF9;&#x957F;&#x5EA6;&#x5355;&#x4F4D;</em>&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x81EA;&#x8EAB;&#x7684;font-size&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5982;&#x679C;&#x5143;&#x7D20;&#x81EA;&#x8EAB;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;font-size&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x9009;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x9ED8;&#x8BA4;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x9ED8;&#x8BA4;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#x662F;16px&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x767E;&#x5206;&#x6BD4;<strong>%</strong>&#x2014;&#x2014;<em>&#x767E;&#x5206;&#x6BD4;&#x5355;&#x4F4D;</em>&#xFF0C;&#x7EE7;&#x627F;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x67D0;&#x4E2A;&#x76D2;&#x5B50;&#x7684;&#x5BBD;&#x5EA6;&#x3002;</p>
+</li>
+<li><p><strong>rem</strong>&#x2014;&#x2014;<em>&#x76F8;&#x5BF9;&#x957F;&#x5EA6;&#x5355;&#x4F4D;</em>&#x3002;</p>
+<p>&#x200B;    &#x8BBE;&#x7F6E;&#x5B57;&#x4F53;&#x957F;&#x5EA6;&#x5355;&#x4F4D;&#x4E00;&#x822C;&#x4F7F;&#x7528;px&#xFF0C;em&#xFF0C;rem&#xFF08;&#x5728;&#x9700;&#x8981;&#x9002;&#x914D;&#x591A;&#x79CD;&#x5206;&#x8FA8;&#x7387;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x5982;<strong>&#x79FB;&#x52A8;&#x7AEF;</strong>&#xFF0C;&#x5C31;&#x4F18;&#x5148;&#x4F7F;&#x7528;rem&#xFF09;&#x3002;</p>
+<a id="more"></a>
+</li>
+</ul>
+<h4 id="rem&#x7684;&#x5B9A;&#x4E49;&#xFF1A;"><a href="#rem&#x7684;&#x5B9A;&#x4E49;&#xFF1A;" class="headerlink" title="rem&#x7684;&#x5B9A;&#x4E49;&#xFF1A;"></a>rem&#x7684;&#x5B9A;&#x4E49;&#xFF1A;</h4><p>&#x200B;      rem&#x662F;CSS3&#x65B0;&#x589E;&#x52A0;&#x7684;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x5355;&#x4F4D;&#xFF0C;&#x5B83;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;HTML&#x6839;&#x5143;&#x7D20;&#x7684;font-size&#x7684;&#x503C;&#x6765;&#x5BF9;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x5927;&#x5C0F;&#x7684;&#x5355;&#x4F4D;&#xFF0C;&#x4E00;&#x822C;&#x5E94;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x9002;&#x914D;&#x591A;&#x79CD;&#x5206;&#x8FA8;&#x7387;&#x7684;&#x79FB;&#x52A8;&#x7AEF;&#x9875;&#x9762;&#xFF1B;&#x4F7F;&#x7528;rem&#x5355;&#x4F4D;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x5927;&#x5C0F;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x4EE5;&#x540E;&#x5BF9;&#x9875;&#x9762;&#x7684;&#x7EF4;&#x62A4;&#xFF08;&#x4FEE;&#x6539;HTML&#x7684;font-size&#x7684;&#x503C;&#x5373;&#x53EF;&#xFF09;&#x3002;</p>
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@media screen and (width:640px) {//&#x8FD9;&#x91CC;&#x7684;width&#x662F;&#x8BBE;&#x8BA1;&#x7A3F;&#x7684;&#x5BBD;&#x5EA6;</span><br><span class="line">  html {</span><br><span class="line">    font-size: 100px;//&#x9ED8;&#x8BA4;&#x57FA;&#x7840;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;100</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="&#x5173;&#x4E8E;rem&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;"><a href="#&#x5173;&#x4E8E;rem&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;" class="headerlink" title="&#x5173;&#x4E8E;rem&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;"></a>&#x5173;&#x4E8E;rem&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</h4><p>&#x200B;    &#x5148;&#x7ED9;HTML&#x7684;font-size&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x503C;&#xFF0C;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x4E3A;100&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x8BBE;&#x7F6E;&#x7ED9;HTML&#x7684;font-size&#x3002;&#x8BBE;&#x7F6E;&#x4E3A;100&#x540E;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x5143;&#x7D20;&#x5927;&#x5C0F;&#x8BBE;&#x7F6E;&#x9700;&#x8981;&#x7F29;&#x5C0F;&#x4E00;&#x767E;&#x500D;&#xFF08;&#x6BD4;&#x5982;&#x67D0;&#x4E2A;&#x76D2;&#x5B50;&#x7684;&#x5B57;&#x4F53;&#x7684;&#x5927;&#x5C0F;&#x662F;&#x5C06;&#x8981;&#x8BBE;&#x7F6E;&#x4E3A;font-size&#xFF1A;16px&#xFF0C;&#x5219;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E3A;font-size&#xFF1A;0.16rem&#xFF09;&#x3002;</p>
+<p>&#x200B;    <strong>&#x6CE8;&#x610F;&#xFF1A;rem&#x9700;&#x8981;&#x914D;&#x5408;&#x5A92;&#x4F53;&#x67E5;&#x8BE2;&#x4F7F;&#x7528;&#xFF08;&#x5A92;&#x4F53;&#x67E5;&#x8BE2;&#xFF1A;&#x4E00;&#x79CD;css&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8BBE;&#x5907;&#x5C4F;&#x5E55;&#x7684;&#x4E0D;&#x540C;&#x6765;&#x52A0;&#x8F7D;&#x5BF9;&#x5E94;&#x7684;css&#x4EE3;&#x7801;&#xFF09;</strong></p>
+<p>&#x5728;&#x9875;&#x9762;&#x7684;css&#x9876;&#x90E8;&#xFF0C;&#x9700;&#x8981;&#x52A0;&#x5A92;&#x4F53;&#x67E5;&#x8BE2;&#xFF08;@media&#xFF09;&#x6765;&#x8BBE;&#x7F6E;HTML&#x7684;font-size&#x3002;</p>
+<p><img src="https://i.loli.net/2019/03/11/5c86659bc1911.png" alt="1.png"></p>
+<p>&#x8FD9;&#x662F;&#x6709;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x7684;&#xFF1A;<strong>font-size=&#x8981;&#x9002;&#x914D;&#x7684;&#x5C4F;&#x5E55;&#x5BBD;&#x5EA6;*&#x57FA;&#x7840;&#x503C;/&#x8BBE;&#x8BA1;&#x7A3F;&#x7684;&#x5BBD;&#x5EA6;</strong></p>
+<p>&#x200B;    &#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#x591A;&#x4E2A;&#x5A92;&#x4F53;&#x67E5;&#x8BE2;&#x7684;<a href="https://mxd.tencent.com/wp-content/uploads/2014/11/rem.html" target="_blank" rel="noopener">&#x5728;&#x7EBF;&#x5DE5;&#x5177;</a>&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x8BBE;&#x8BA1;&#x7A3F;&#x5BBD;&#x5EA6;&#x4EE5;&#x53CA;&#x57FA;&#x7840;&#x503C;&#xFF0C;&#x5373;&#x53EF;&#x751F;&#x6210;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x5BBD;&#x5EA6;&#x5BF9;&#x5E94;&#x7684;&#x5A92;&#x4F53;&#x67E5;&#x8BE2;&#x4EE3;&#x7801;&#xFF0C;&#x5C06;&#x5176;&#x5F15;&#x5165;&#x4F60;&#x7684;css&#x4E2D;&#x5373;&#x53EF;&#x4F7F;&#x4F60;&#x7684;&#x9875;&#x9762;&#x517C;&#x5BB9;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x5206;&#x8FA8;&#x7387;&#x7684;&#x663E;&#x793A;&#xFF08;&#x8981;&#x653E;&#x5728;&#x5728;&#x4F60;&#x7F16;&#x5199;&#x7684;css&#x4E4B;&#x524D;&#xFF09;&#x3002;</p>
+<p><img src="https://i.loli.net/2019/03/11/5c86659e60404.png" alt="3.png"></p>
+<p>&#x200B;    <strong>&#x76EE;&#x524D;&#x5DF2;&#x77E5;&#x7684;&#x7F3A;&#x9677;&#xFF08;&#x6570;&#x636E;&#x6E90;&#x81EA;<a href="https://www.caniuse.com/#search=rem" target="_blank" rel="noopener">Can I use&#xFF1F;</a>&#xFF09;&#xFF1A;</strong></p>
+<ul>
+<li><p>&#x57FA;&#x4E8E;Chrome 31-34&#x548C;Chrome&#x7684;Android&#x7248;&#x672C;&#xFF08;&#x5982;4.4&#xFF09;&#x5728;&#x6839;&#x5143;&#x7D20;&#x5177;&#x6709;&#x57FA;&#x4E8E;&#x767E;&#x5206;&#x6BD4;&#x7684;&#x5927;&#x5C0F;&#x65F6;&#x4F1A;&#x51FA;&#x73B0;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#x9519;&#x8BEF;&#x3002;</p>
+</li>
+<li><p>&#x636E;&#x62A5;&#x9053;&#xFF0C;Android 4.3&#x7248;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x4E8E;Samsung Note II&#x6216;Android 4.2&#x4E0A;&#x7684;&#x4E09;&#x661F;Galaxy Tab 2&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;</p>
+</li>
+<li><p>&#x5F53;&#x9875;&#x9762;&#x5728;Chrome&#x4E2D;&#x7F29;&#x5C0F;&#x65F6;&#xFF0C;&#x4EE5;&#x201C;rem&#x201D;&#x4E3A;&#x5C3A;&#x5BF8;&#x7684;&#x8FB9;&#x6846;&#x6D88;&#x5931;&#x3002;</p>
+</li>
+<li><p>&#x5728;&#x4F2A;&#x5143;&#x7D20;&#xFF08;&#xFF1A;before&#x548C;&#xFF1A;after&#xFF09;&#x4E2D;&#x4F7F;&#x7528;&#x201C;line-height&#x201D;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;IE 9,10&#x548C;11&#x4E0D;&#x652F;&#x6301;rem&#x5355;&#x5143;</p>
+</li>
+<li><p>&#x5BFC;&#x81F4;&#x901A;&#x5E38;&#x5177;&#x6709;Safari 5.1&#x7684;iPhone 4&#x4E0A;&#x7684;&#x5185;&#x5BB9;&#x663E;&#x793A;&#x548C;&#x6EDA;&#x52A8;&#x95EE;&#x9898;&#x3002;</p>
+<p><strong>&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x672C;&#x4EBA;&#x8E29;&#x8FC7;&#x7684;&#x5751;&#xFF1A;</strong></p>
+</li>
+</ul>
+<p>&#x90E8;&#x5206;css&#x521D;&#x59CB;&#x5316;&#x4EE3;&#x7801;&#x91CC;&#x8BBE;&#x7F6E;&#x4E86;&#x5143;&#x7D20;&#x7684;<strong>line-hight</strong>&#xFF0C;&#x6B64;&#x65F6;&#x4F7F;&#x7528;rem&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x5927;&#x5C0F;&#x5C06;&#x4F1A;&#x51FA;&#x73B0;&#x5E03;&#x5C40;&#x9519;&#x4E71;&#xFF08;&#x884C;&#x9AD8;&#x653E;&#x5927;&#x4E86;&#x597D;&#x51E0;&#x500D;&#xFF09;&#x3002;</p>
+<p><img src="https://i.loli.net/2019/03/11/5c86659a9cbfb.png" alt="2-1.png"></p>
+<p><img src="https://i.loli.net/2019/03/11/5c86659d2f8be.png" alt="2-2.png"></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/CSS/">CSS</a>, <a class="has-link-grey -link" href="/tags/布局/">布局</a>, <a class="has-link-grey -link" href="/tags/笔记/">笔记</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/posts/d58806e.html">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">前端常用插件及相关工具整理</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/posts/203dfdcf.html">
+                <span class="level-item">MD模板</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Jim">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Jim
+                    </p>
+                    
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>China-GuangDong</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        14
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        11
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/zhujinyao822" target="_blank">
+                关注我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc" style="max-height: 400px;overflow: auto;">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#&#x5148;&#x8BF4;&#x8BF4;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x6211;&#x6240;&#x5B66;&#x5230;&#x7684;&#x957F;&#x5EA6;&#x5355;&#x4F4D;">
+        <span class="has-mr-6">1</span>
+        <span>&#x5148;&#x8BF4;&#x8BF4;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x6211;&#x6240;&#x5B66;&#x5230;&#x7684;&#x957F;&#x5EA6;&#x5355;&#x4F4D;</span>
+        </a></li><li>
+        <a class="is-flex" href="#rem&#x7684;&#x5B9A;&#x4E49;&#xFF1A;">
+        <span class="has-mr-6">2</span>
+        <span>rem&#x7684;&#x5B9A;&#x4E49;&#xFF1A;</span>
+        </a></li><li>
+        <a class="is-flex" href="#&#x5173;&#x4E8E;rem&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;">
+        <span class="has-mr-6">3</span>
+        <span>&#x5173;&#x4E8E;rem&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <!-- 2019年4月21日：设置浏览文章时为双栏模式（修改下面一行） -->
+        <!-- <div class="column-right-shadow is-hidden-widescreen "> -->
+        <div class="column-right-shadow  ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/学习笔记类/">
+            <span class="level-start">
+                <span class="level-item">学习笔记类</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/杂项/">
+            <span class="level-start">
+                <span class="level-item">杂项</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/模板类/">
+            <span class="level-start">
+                <span class="level-item">模板类</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/资料类/">
+            <span class="level-start">
+                <span class="level-item">资料类</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-04T09:53:01.988Z">2019-05-04</time></div>
+                    <a href="/posts/9c2031c1.html" class="has-link-black-ter is-size-6">php端解决跨域问题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习笔记类/">学习笔记类</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-12T00:00:00.000Z">2018-09-12</time></div>
+                    <a href="/posts/ac8702bc.html" class="has-link-black-ter is-size-6">高效前端·Web优化</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/资料类/">资料类</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-07-01T21:41:18.000Z">2018-07-01</time></div>
+                    <a href="/posts/ecf06ca9.html" class="has-link-black-ter is-size-6">移动端常用样式及兼容相关</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/资料类/">资料类</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-07-01T16:23:08.000Z">2018-07-01</time></div>
+                    <a href="/posts/14e60f66.html" class="has-link-black-ter is-size-6">常用css/css3代码段</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/资料类/">资料类</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-06-27T21:24:52.000Z">2018-06-27</time></div>
+                    <a href="/posts/91b27d98.html" class="has-link-black-ter is-size-6">vscode插件Settings Sync使用介绍</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/资料类/">资料类</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/VUE/">
+                        <span class="tag">VUE</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/php/">
+                        <span class="tag">php</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/vsCode/">
+                        <span class="tag">vsCode</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/优化/">
+                        <span class="tag">优化</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/后端/">
+                        <span class="tag">后端</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/布局/">
+                        <span class="tag">布局</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/杂/">
+                        <span class="tag">杂</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/笔记/">
+                        <span class="tag">笔记</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/网络交互/">
+                        <span class="tag">网络交互</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/阅读笔记/">
+                        <span class="tag">阅读笔记</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                <!-- 2019年4月21日：设置浏览文章时为双栏模式（新增下面一行if判断，25-27） -->
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/avatar.png" alt="关于REM布局的相关知识" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Jim&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                共<span id="busuanzi_value_site_uv">0</span>个访客
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
